@@ -30,14 +30,14 @@ class Helios():
         self._workspace = {
             'main': [['websites', 'github.com/flemk/helios'],
                 ['shell commands', 'echo hello world']], 
-            'private': [['mail.google.com', 'kostelezky.com'],
+            'private': [['mail.google.com'],
                 []],
             'uni': [['ilias.uni-freiburg.de', 'campus.uni-freiburg.de'],
-                ['explorer.exe D:/main/ese/V']],
+                ['D: && cd /main/ese/V && explorer.exe .']],
             'kostelezky': [['kostelezky.de'],
                 []],
             'simulation': [['zulip.vm.uni-freiburg.de', 'localhost:8888'],
-                ['cd D:/main/simulation/project/ModelReconstruction && jupyter notebook']],
+                ['D: && cd /main/simulation/project/ModelReconstruction && jupyter notebook']],
             'stock': [['comdirect.de', 'kreissparkasse-ravensburg.de'],
                 []]
         }
@@ -64,6 +64,8 @@ class Helios():
             [print('    %s' % (el)) for el in web]
             print('  -cmd:')
             [print('    %s' % (el)) for el in cmd]
+
+        input('PRESS ENTER TO EXIT')
 
     def workspace_edit(self, workspace=None, action=None, appendix=None):
         '''
@@ -103,6 +105,8 @@ def print_usage():
     ''' prints usage via print and awaits input (pauses) then exits.
     '''
     print('helios.py param1 [param2, ...]\n')
+    print('for more information visit: github.com/flemk/helios')
+    print('')
     print('param1')
     print('  help')
     print('  open [name of workspace]')
