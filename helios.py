@@ -31,14 +31,6 @@ class Helios():
             'main': [['websites', 'github.com/flemk/helios'],
                 ['shell commands', 'echo hello world']], 
             'private': [['mail.google.com'],
-                []],
-            'uni': [['ilias.uni-freiburg.de', 'campus.uni-freiburg.de'],
-                ['D: && cd /main/ese/V && explorer.exe .']],
-            'kostelezky': [['kostelezky.de'],
-                []],
-            'simulation': [['zulip.vm.uni-freiburg.de', 'localhost:8888'],
-                ['D: && cd /main/simulation/project/ModelReconstruction && jupyter notebook']],
-            'stock': [['comdirect.de', 'kreissparkasse-ravensburg.de'],
                 []]
         }
 
