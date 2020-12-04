@@ -28,10 +28,8 @@ class Helios():
 
         self._browser_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
         self._workspace = {
-            'main': [['websites', 'github.com/flemk/helios'],
-                ['shell commands', 'echo hello world']], 
-            'private': [['mail.google.com'],
-                []]
+            'main': [['github.com/flemk/helios'],
+                ['echo hello world']]
         }
 
     def workspace_print(self, workspace=None):
@@ -101,8 +99,8 @@ def print_usage():
     print('')
     print('param1')
     print('  help')
-    print('  open [name of workspace]')
-    print('  print [name of workspace]')
+    print('  rise [name of workspace]: opens workspace')
+    print('  list [name of workspace]')
     print('  edit <name of workspace>')
     print('    new')
     print('    remove')
@@ -117,7 +115,6 @@ def main():
     # if helios has already been configured, load configuration of config_path
     script_path = os.path.dirname(sys.argv[0])
     config_path = os.path.join(script_path, 'config.pkl')
-    print(config_path)
     try:
         #h = load(config_path, allow_pickle=True)
         h = pickle.load(open(config_path, 'rb'))
@@ -133,10 +130,10 @@ def main():
     if l > 1:
         if args[1] == 'help':
             print_usage()
-        elif args[1] == 'print':
+        elif args[1] == 'list':
             t = None if l < 3 else args[2]
             h.workspace_print(t)
-        elif args[1] == 'open' and l >= 2:
+        elif args[1] == 'rise' and l >= 2:
             t = 'main' if l <= 2 else args[2]
             print('Opening %s' % (t))
             h.workspace_start(t)

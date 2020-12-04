@@ -17,9 +17,9 @@ Helios is a python script which can be accessed by command line. It does open di
 ## Commands
 ```helios help``` prints some information
 
-```helios open``` opens "main" workspace
+```helios rise``` opens "main" workspace
 
-```helios open <workspace>``` opens workspace
+```helios rise <workspace>``` opens workspace
 
 ```helios edit <workspace> new``` creates new workspace
 
@@ -29,4 +29,4 @@ Helios is a python script which can be accessed by command line. It does open di
 
 ```helios edit <workspace> add-cmd <CMD>``` adds CMD to workspace
 
-```helios print <workspace>``` prints workspace and its assets. if workspace is not defined, all assets will be printed.
+```helios list <workspace>``` prints workspace and its assets. if workspace is not defined, all assets will be printed.
